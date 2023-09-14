@@ -46,7 +46,7 @@ func (x *X22Request) setSha256(s string) {
 }
 
 func (x *X22Request) GetSignSource(s string) (string, error) {
-	return x.Paymenttags.LmiPayeePurse + x.Paymenttags.LmiPaymentNo + x.Validityperiodinhours, nil
+	return x.Wmid + x.Paymenttags.LmiPayeePurse + x.Paymenttags.LmiPaymentNo + x.Validityperiodinhours + x.SecretKey, nil
 }
 
 type X22Response struct {
